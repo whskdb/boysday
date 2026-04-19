@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Từ phụ nữ A2K55💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      /* Restored Sky Blue Background */
+      background: #e1f5fe;
+      background-image: linear-gradient(135deg, #81d4fa 0%, #e1f5fe 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Bigger, High-Visibility Stationary White Hearts */
+    .heart {
+      position: absolute;
+      color: white;
+      opacity: 0.9; /* More visible */
+      pointer-events: none;
+      z-index: 1;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05)); /* Subtle depth */
+    }
+    
+    /* Varied sizes and positions */
+    .h1 { top: 5%; left: 5%; font-size: 3rem; }
+    .h2 { top: 15%; right: 8%; font-size: 2.2rem; }
+    .h3 { top: 25%; left: 18%; font-size: 2.8rem; }
+    .h4 { top: 32%; right: 22%; font-size: 1.8rem; }
+    .h5 { top: 42%; left: 7%; font-size: 3.5rem; }
+    .h6 { top: 52%; right: 12%; font-size: 2.5rem; }
+    .h7 { top: 65%; left: 22%; font-size: 3rem; }
+    .h8 { top: 72%; right: 18%; font-size: 2rem; }
+    .h9 { top: 82%; left: 5%; font-size: 2.7rem; }
+    .h10 { bottom: 12%; right: 8%; font-size: 3.2rem; }
+    .h11 { bottom: 5%; left: 15%; font-size: 2.4rem; }
+    .h12 { bottom: 20%; left: 12%; font-size: 2.1rem; }
+    .h13 { top: 48%; left: 48%; font-size: 4rem; opacity: 0.3; } /* Large subtle center heart */
+
+    h1 {
+      margin: 40px 20px;
+      color: #333;
+      font-size: 2.5rem;
+      font-weight: 700;
+      z-index: 10;
+      text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      width: 90%;
+      max-width: 1000px;
+      z-index: 10;
+      margin-bottom: 50px;
+    }
+
+    .bubble {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: white;
+      padding: 15px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .bubble:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+    
+    .photo-area {
+      width: 100%;
+      aspect-ratio: 1/1;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+    }
+    
+    .friend-name {
+      margin-top: 15px;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #333;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.3);
+      display: none; justify-content: center; align-items: center;
+      z-index: 100;
+      backdrop-filter: blur(5px);
+    }
+    
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    input { padding: 12px; border-radius: 10px; border: 1px solid #ddd; width: 220px; outline: none; }
+    button { background: #f48fb1; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; margin-top: 10px; font-weight: 700; }
+
+    .page {
+      display: none;
+      width: 95%;
+      max-width: 500px;
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+      z-index: 50;
+      margin: 40px 0;
+      position: relative;
+    }
+
+    .page-header {
+      background: linear-gradient(to bottom, #fce4ec, #f8bbd0);
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .close-x {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 24px;
+      color: #e57373;
+      cursor: pointer;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .page-pfp {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid white;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      bottom: -50px;
+    }
+
+    .page-content {
+      padding: 60px 25px 30px;
+      text-align: center;
+    }
+
+    .page-name {
+      color: #880e4f;
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+
+    .unlocked-status {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    .check-circle {
+      width: 40px;
+      height: 40px;
+      background: #e8f5e9;
+      color: #4caf50;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .letter-box {
+      background: #fff5f8;
+      border-radius: 20px;
+      padding: 25px 35px 45px;
+      text-align: left;
+      position: relative;
+      color: #4a4a4a;
+      line-height: 1.6;
+      font-size: 1.1rem;
+      white-space: pre-wrap;
+    }
+
+    .letter-box::before {
+      content: "“";
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      font-size: 80px;
+      color: #f8bbd0;
+      opacity: 0.5;
+      font-family: serif;
+    }
+
+    .letter-box::after {
+      content: "”";
+      position: absolute;
+      bottom: -30px;
+      right: 15px;
+      font-size: 80px;
+      color: #f8bbd0;
+      opacity: 0.5;
+      font-family: serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heart h1">❤</div><div class="heart h2">❤</div>
+  <div class="heart h3">❤</div><div class="heart h4">❤</div>
+  <div class="heart h5">❤</div><div class="heart h6">❤</div>
+  <div class="heart h7">❤</div><div class="heart h8">❤</div>
+  <div class="heart h9">❤</div><div class="heart h10">❤</div>
+  <div class="heart h11">❤</div><div class="heart h12">❤</div>
+  <div class="heart h13">❤</div>
+
+  <h1>Từ phụ nữ A2K55💖</h1>
+  <div id="home" class="grid"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p>Nhập mật khẩu:</p>
+      <input type="password" id="passwordInput">
+      <br>
+      <button onclick="checkPassword()">Mở thư</button>
+    </div>
+  </div>
+
+  <div id="friendPage" class="page">
+    <div class="page-header">
+        <span class="close-x" onclick="goHome()">×</span>
+        <div id="pagePfp" class="page-pfp"></div>
+    </div>
+    <div class="page-content">
+        <h2 id="pageName" class="page-name"></h2>
+        <div class="unlocked-status">
+            <div class="check-circle">✓</div>
+            <strong style="color: #333; font-size: 1.2rem;">Unlocked!</strong>
+        </div>
+        <div class="letter-box" id="pageLetter"></div>
+    </div>
+  </div>
+
+  <script src="friends.js"></script>
+  <script>
+    let selectedFriend = null;
+    const home = document.getElementById("home");
+
+    if (typeof friends !== 'undefined') {
+      friends.forEach((friend, index) => {
+        const div = document.createElement("div");
+        div.className = "bubble";
+        div.innerHTML = `
+          <div class="photo-area" style="background-image: url('${friend.image}');"></div>
+          <p class="friend-name">${friend.name}</p>
+        `;
+        div.onclick = () => openModal(index);
+        home.appendChild(div);
+      });
+    }
+
+    function openModal(index) {
+      selectedFriend = index;
+      document.getElementById("modal").style.display = "flex";
+      document.getElementById("passwordInput").value = "";
+    }
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const friend = friends[selectedFriend];
+      if (input === friend.password) {
+        showFriendPage(friend);
+      } else { alert("Wrong password!"); }
+    }
+
+    function showFriendPage(friend) {
+      document.getElementById("modal").style.display = "none";
+      document.getElementById("home").style.display = "none";
+      document.querySelector("h1").style.display = "none";
+      document.getElementById("pageName").innerText = friend.name;
+      document.getElementById("pagePfp").style.backgroundImage = `url('${friend.image}')`;
+      document.getElementById("pageLetter").innerText = friend.letter;
+      document.getElementById("friendPage").style.display = "block";
+    }
+
+    function goHome() {
+      document.getElementById("friendPage").style.display = "none";
+      document.getElementById("home").style.display = "grid";
+      document.querySelector("h1").style.display = "block";
+    }
+  </script>
+</body>
+</html>
